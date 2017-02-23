@@ -1,0 +1,9 @@
+name: pathfinder
+version: 0.1.0
+
+authors:
+  - oliver schoening <oliverschoning@gmail.com>
+
+crystal: 0.21.0
+
+license: MIT
