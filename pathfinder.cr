@@ -1,5 +1,5 @@
 class Pathfinder
-  property allow_diagonals : Bool
+  property allow_diagonals : Bool, graph : Pathfinder::Graph
 
   def initialize(grid : Array(Array(Int32)), allow_diagonals = false)
     @graph = Graph.new grid
