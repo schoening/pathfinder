@@ -32,7 +32,7 @@ pf.allow_diagonals = true
 ```
 
 ## Accessing/modifying the grid
-The pathfinder creates a grid internally, so to update it dynamically (A creature could be blocking some area occasionally) ypu need to change the the grid like so:
+The pathfinder creates a grid internally, so to update it dynamically (a creature could be blocking some area occasionally) ypu need to change the the grid like so:
 ```
 pf.graph.grid[0][0] = 0 # set to wall
 ```
