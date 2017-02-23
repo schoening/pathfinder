@@ -22,7 +22,7 @@ pf.dest 2, 2
 
 result = pf.search
 
-puts result # [{0, 0}, {1, 0}, {2, 0}, {2, 1}, {2, 2}]
+puts result # [{1, 0}, {2, 0}, {2, 1}, {2, 2}]
 ```
 
 ## Supports optional diagonals (WIP)
