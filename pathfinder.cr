@@ -63,49 +63,33 @@ class Pathfinder
       # UP
       if within_boundary_of? x, y - 1, node_grid
         node = node_grid[x][y - 1]
-        if node.weight != 0
-          if !node.inside? visited
-            if !node.inside? todo
-              todo << node
-              node.parent = current_node
-            end
-          end
+        if node.weight != 0 && !node.inside?(visited) && !node.inside?(todo)
+          todo << node
+          node.parent = current_node
         end
       end
       # DOWN
       if within_boundary_of? x, y + 1, node_grid
         node = node_grid[x][y + 1]
-        if node.weight != 0
-          if !node.inside? visited
-            if !node.inside? todo
-              todo << node
-              node.parent = current_node
-            end
-          end
+        if node.weight != 0 && !node.inside?(visited) && !node.inside?(todo)
+          todo << node
+          node.parent = current_node
         end
       end
       # LEFT
       if within_boundary_of? x - 1, y, node_grid
         node = node_grid[x - 1][y]
-        if node.weight != 0
-          if !node.inside? visited
-            if !node.inside? todo
-              todo << node
-              node.parent = current_node
-            end
-          end
+        if node.weight != 0 && !node.inside?(visited) && !node.inside?(todo)
+          todo << node
+          node.parent = current_node
         end
       end
       # RIGHT
       if within_boundary_of? x + 1, y, node_grid
         node = node_grid[x + 1][y]
-        if node.weight != 0
-          if !node.inside? visited
-            if !node.inside? todo
-              todo << node
-              node.parent = current_node
-            end
-          end
+        if node.weight != 0 && !node.inside?(visited) && !node.inside?(todo)
+          todo << node
+          node.parent = current_node
         end
       end
       # TODO: Prevent diagonals at the edges of walls.
@@ -113,49 +97,33 @@ class Pathfinder
         # NORTH WEST
         if within_boundary_of? x - 1, y - 1, node_grid
           node = node_grid[x - 1][y - 1]
-          if node.weight != 0
-            if !node.inside? visited
-              if !node.inside? todo
-                todo << node
-                node.parent = current_node
-              end
-            end
+          if node.weight != 0 && !node.inside?(visited) && !node.inside?(todo)
+            todo << node
+            node.parent = current_node
           end
         end
         # NORTH EAST
         if within_boundary_of? x + 1, y - 1, node_grid
           node = node_grid[x + 1][y - 1]
-          if node.weight != 0
-            if !node.inside? visited
-              if !node.inside? todo
-                todo << node
-                node.parent = current_node
-              end
-            end
+          if node.weight != 0 && !node.inside?(visited) && !node.inside?(todo)
+            todo << node
+            node.parent = current_node
           end
         end
         # SOUTH EAST
         if within_boundary_of? x + 1, y + 1, node_grid
           node = node_grid[x + 1][y + 1]
-          if node.weight != 0
-            if !node.inside? visited
-              if !node.inside? todo
-                todo << node
-                node.parent = current_node
-              end
-            end
+          if node.weight != 0 && !node.inside?(visited) && !node.inside?(todo)
+            todo << node
+            node.parent = current_node
           end
         end
         # SOUTH WEST
         if within_boundary_of? x - 1, y + 1, node_grid
           node = node_grid[x - 1][y + 1]
-          if node.weight != 0
-            if !node.inside? visited
-              if !node.inside? todo
-                todo << node
-                node.parent = current_node
-              end
-            end
+          if node.weight != 0 && !node.inside?(visited) && !node.inside?(todo)
+            todo << node
+            node.parent = current_node
           end
         end
       end
