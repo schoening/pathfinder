@@ -24,7 +24,6 @@ class Pathfinder
     while true
       parent = node.parent
       if parent.nil?
-        path << {node.x, node.y}
         break
       else
         path << {node.x, node.y}
