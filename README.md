@@ -28,7 +28,7 @@ puts result # [{x: 0, y: 1}, {x: 0, y: 2}, {x: 1, y: 2}, {x: 2, y: 2}]
 
 ## Accessing/modifying the grid
 
-Pathfinder uses keeps a reference to the grid passed in.
+Pathfinder keeps a reference to the grid passed in.
 You can change the grid like this:
 ```
 pf.grid[0][0] = 0 # set to wall.
