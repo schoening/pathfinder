@@ -21,6 +21,8 @@ pf.start(0, 0)
 pf.dest(2, 2)
 
 result = pf.search
+
+puts result # [{x: 0, y: 1}, {x: 0, y: 2}, {x: 1, y: 2}, {x: 2, y: 2}]
 ```
 
 
