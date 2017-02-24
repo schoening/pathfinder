@@ -35,5 +35,5 @@ pf.grid[0][0] = 0 # set to wall.
 ```
 Or by changing the grid that was passed in to the Pathfinder class at initializaton directly.
 ```
-grid[0][0] = 1 # changes the pf.grid[0][0] to 1.
+grid[0][0] = 1 # changes the pf.grid[0][0] too 1.
 ```
