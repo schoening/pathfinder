@@ -15,24 +15,23 @@ grid = [
   [1, 1, 1],
 ]
 
-pf = Pathfinder.new grid
+pf = Pathfinder.new(grid)
 
-pf.start 0, 0
-pf.dest 2, 2
+pf.start(0, 0)
+pf.dest(2, 2)
 
 result = pf.search
-
-puts result # [{1, 0}, {2, 0}, {2, 1}, {2, 2}]
 ```
 
-## Supports optional diagonals (WIP)
-Diagonals still need some work, try them out by enabling them:
-```
-pf.allow_diagonals = true
-```
 
 ## Accessing/modifying the grid
-The pathfinder creates a grid internally, so to update it dynamically (a creature could be blocking some area occasionally) ypu need to change the the grid like so:
+
+Pathfinder uses keeps a reference to the grid passed in.
+You can change the grid like this:
 ```
-pf.graph.grid[0][0] = 0 # set to wall
+pf.grid[0][0] = 0 # set to wall.
+```
+Or by changing the grid that was passed in to the Pathfinder class at initializaton directly.
+```
+grid[0][0] = 1 # changes the pf.grid[0][0] to 1.
 ```
