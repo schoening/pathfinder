@@ -3,7 +3,7 @@ class Pathfinder
   property grid : Array(Array(Int32))
 
   def initialize(grid : Array(Array(Int32)))
-    @grid = grid.clone
+    @grid = grid
 
     @start = Point.new 0, 0
     @dest = Point.new 0, 0
