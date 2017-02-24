@@ -1,4 +1,4 @@
-class Pathfinder2
+class Pathfinder
   alias Node = NamedTuple(x: Int32, y: Int32)
   property grid : Array(Array(Int32))
 
